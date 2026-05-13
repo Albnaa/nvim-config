@@ -11,6 +11,7 @@ return {
       vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = 'Telescope live grep' })
       vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = 'Telescope buffers' })
       vim.keymap.set("n", "<leader>ff", builtin.current_buffer_fuzzy_find, { desc = 'Telescope buffers' })
+      vim.keymap.set("n", "<leader>fe", builtin.diagnostics, { desc = 'Telescope diagnostics' })
     end
   }
 }
