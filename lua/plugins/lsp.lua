@@ -9,7 +9,6 @@ return {
       capabilities = capabilities,
       settings = {
         ['rust-analyzer'] = {
-          -- The fix is right here: we use 'check' instead of 'checkOnSave'
           check = {
             command = "clippy",
           },
@@ -17,7 +16,17 @@ return {
       }
     })
 
+    vim.lsp.config('pyright', {
+      capabilities = capabilities,
+    })
+
+    vim.lsp.config('ruff', {
+      capabilities = capabilities,
+    })
+
     vim.lsp.enable('rust_analyzer')
+    vim.lsp.enable('pyright')
+    vim.lsp.enable('ruff')
   end,
 }
 
